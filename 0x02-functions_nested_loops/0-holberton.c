@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "maini.h"
 
 /**
  * main - Prints Holberton as a message.
