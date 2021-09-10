@@ -62,16 +62,14 @@ char *add_strings(char *n1, char *n2, char *r, int r_index)
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-OAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOA	int index, n1_len = 0, n2_len = 0;
+int index, n1_len = 0, n2_len = 0;
 
-OAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOA	for (index = 0; *(n1 + index); index++)
-[5~OAOAOAOAOAOAOAOAOAOA		n1_len++;
-OAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOA
-OAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOA	for (index = 0; *(n2 + index); index++)
-OAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOA		n2_len++;
-OAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOA
+	for (index = 0; *(n1 + index); index++)
+		n1_len++;
+	for (index = 0; *(n2 + index); index++)
+		n2_len++;
 	if (size_r <= n1_len + 1 || size_r <= n2_len + 1)
-OAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOA		return (0);
+return (0);
 
 	n1 += n1_len - 1;
 	n2 += n2_len - 1;
