@@ -1,8 +1,3 @@
-/*
- * File: 0-strcat.c
- * Auth: K1dus
- */
-
 #include "main.h"
 
 /**
