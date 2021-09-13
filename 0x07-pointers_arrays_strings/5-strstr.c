@@ -17,9 +17,9 @@ char *_strstr(char *haystack, char *needle)
 		for (i = 0; *(needle + i); i++)
 			if (*(needle + i) != *(haystack + i))
 				break;
-OAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOA		if (!*(needle + i))
+		if (!*(needle + i))
 			return (haystack);
-OAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOA		haystack++;
-OAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOA	}
-OAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOA	return (NULL);
+		haystack++;
+	}
+	return (NULL);
 }
