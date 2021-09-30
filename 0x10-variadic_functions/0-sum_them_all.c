@@ -1,22 +1,21 @@
-#ifndef _VARIADIC_FUNCTIONS_H_
-#define _VARIADIC_FUNCTIONS_H_
+#include "variadic_functions.h"
 
-#include <stdarg.h>
 /**
- * struct print - print type with corresponding print function
- * @t: print type
- * @f: print function
- */
-typedef struct print
+  * sum_them_all - adds all passed ints to the function
+  * @n: number of passed arguments
+  * Return: sum
+  */
+
+int sum_them_all(const unsigned int n, ...)
 {
-	char *t;
-	void (*f)(va_list);
-} print_t;
+	unsigned int i, sum = 0;
+	va_list arg;
 
-int _putchar(char);
-int sum_them_all(const unsigned int n, ...);
-void print_numbers(const char *separator, const unsigned int n, ...);
-void print_strings(const char *separator, const unsigned int n, ...);
-void print_all(const char * const format, ...);
+	va_start(arg, n);
 
-#endif /* _VARIADIC_FUNCTIONS_H_ */
+	for (i = 0; i < n; i++)
+		sum += va_arg(arg, int);
+	va_end(arg);
+
+	return (sum);
+}
